@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - Gourmet Delights</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="index.html" class="logo">Gourmet Delights</a>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-link active">About</a></li>
+            <li><a href="contact.php" class="nav-link">Contact</a></li>
+          </ul>
+
+          <!-- Bucket List Button with Label -->
+          <button
+            id="bucket-btn"
+            class="bucket-btn"
+            aria-label="Open Bucket List"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="bucket-icon"
+            >
+              <path
+                d="M9 2h6a2 2 0 0 1 2 2v2h-2V4H9v2H7V4a2 2 0 0 1 2-2z"
+              ></path>
+              <path d="M5 8h14l-1 12H6L5 8z"></path>
+            </svg>
+            <span class="bucket-label">Bucket List</span>
+            <span id="bucket-count" class="bucket-count">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==================== HERO (ABOUT) ==================== -->
+    <section class="hero about-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="fade-in">Our Story</h1>
+          <p class="fade-in">
+            Passion, flavor, and community – served fresh in the heart of
+            Vanderbijlpark.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT CONTENT ==================== -->
+    <section class="about-content">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Left: Text -->
+          <div class="about-text">
+            <h2 class="section-title">Welcome to Gourmet Delights</h2>
+            <p>
+              Established in 2018, <strong>Gourmet Delights</strong> was born
+              from a love of food and a dream to bring world-class flavors to
+              the Vaal Triangle. Located on
+              <em>SE7 Barrage Road, Vanderbijlpark</em>, we pride ourselves on
+              using only the freshest local ingredients, hand-picked daily.
+            </p>
+            <p>
+              From our crispy <strong>Vegetable Spring Rolls</strong> to the
+              indulgent <strong>New York Cheesecake</strong>, every dish is
+              crafted with care by our talented chefs.
+            </p>
+            <p>
+              Whether you're joining us for a family dinner, a quick lunch, or a
+              special celebration, we promise a warm welcome and an
+              unforgettable meal.
+            </p>
+
+            <h3>Our Values</h3>
+            <ul class="values-list">
+              <li>Quality ingredients, every time</li>
+              <li>Friendly, attentive service</li>
+              <li>Supporting local farmers & suppliers</li>
+              <li>Eco-friendly practices (recyclable packaging)</li>
+            </ul>
+            <br />
+
+            <a href="contact.php" class="cta-button">Get in Touch</a>
+          </div>
+
+          <!-- Right: Image (KEEP) -->
+          <div class="about-image">
+            <img
+              src="images/about-chef.jpg"
+              alt="Chef preparing gourmet dish"
+              class="fade-in"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR TEAM (Clean Cards, No Letters) ==================== -->
+    <section class="team">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="team-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path>
+                <path d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                <path d="M5 22h14"></path>
+              </svg>
+            </div>
+            <h3>Jane Mokoena</h3>
+            <p class="role">Head Chef</p>
+            <p>
+              15+ years creating culinary masterpieces with a South African
+              twist.
+            </p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path>
+                <path d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                <path d="M5 22h14"></path>
+              </svg>
+            </div>
+            <h3>Tom van der Merwe</h3>
+            <p class="role">Restaurant Manager</p>
+            <p>Ensures every guest leaves with a smile and a full belly.</p>
+          </div>
+
+          <div class="team-card">
+            <div class="team-icon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="40"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"></path>
+                <path d="M12 14a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path>
+                <path d="M5 22h14"></path>
+              </svg>
+            </div>
+            <h3>Lisa Nkosi</h3>
+            <p class="role">Sommelier</p>
+            <p>Curates the perfect wine pairings for every dish.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BUCKET LIST MODAL ==================== -->
+    <div id="bucket-modal" class="bucket-modal">
+      <div class="bucket-modal-content">
+        <span class="bucket-close">×</span>
+        <h2>Bucket List</h2>
+
+        <ul id="bucket-items"></ul>
+
+        <div class="delivery-section">
+          <h3>Delivery Option</h3>
+          <label
+            ><input type="radio" name="delivery" value="pickup" checked />
+            Pick-up (Free)</label
+          ><br />
+          <label
+            ><input type="radio" name="delivery" value="standard" /> Standard
+            Delivery (R35)</label
+          ><br />
+          <label
+            ><input type="radio" name="delivery" value="express" /> Express
+            Delivery (R70)</label
+          >
+        </div>
+
+        <div class="bucket-totals">
+          <p>Subtotal: R<span id="bucket-subtotal">0.00</span></p>
+          <p>Delivery: R<span id="bucket-delivery">0.00</span></p>
+          <p class="grand-total">Total: R<span id="bucket-total">0.00</span></p>
+        </div>
+
+        <div class="bucket-actions">
+          <button id="clear-bucket" class="clear-cart">
+            Clear Bucket List
+          </button>
+          <button id="checkout-btn" class="cta-button">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="container">
+        <p>Gourmet Delights Restaurant</p>
+        <p>SE7 Barrage Road, Vanderbijlpark, Gauteng, South Africa</p>
+        <p>Phone: (016) 123-4567</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link"
+            >Facebook</a
+          >
+          <a href="https://x.com" target="_blank" class="social-link">X</a>
+          <a href="https://instagram.com" target="_blank" class="social-link"
+            >Instagram</a
+          >
+          <a href="https://linkedin.com" target="_blank" class="social-link"
+            >LinkedIn</a
+          >
+          <a href="https://youtube.com" target="_blank" class="social-link"
+            >YouTube</a
+          >
+          <a href="https://pinterest.com" target="_blank" class="social-link"
+            >Pinterest</a
+          >
+          <a href="https://tiktok.com" target="_blank" class="social-link"
+            >TikTok</a
+          >
+        </div>
+        <p>© 2025 Gourmet Delights. All rights reserved.</p>
+        <p>
+          Discover more:
+          <a href="https://www.foodnetwork.com" target="_blank">Food Network</a>
+          | <a href="https://www.tasteatlas.com" target="_blank">TasteAtlas</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

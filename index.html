@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Gourmet Delights</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ==================== NAVBAR ==================== -->
+    <header>
+      <nav class="navbar">
+        <div class="container nav-container">
+          <a href="index.html" class="logo">Gourmet Delights</a>
+          <ul class="nav-links">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="about.html" class="nav-link">About</a></li>
+            <li><a href="contact.php" class="nav-link">Contact</a></li>
+          </ul>
+
+          <!-- Bucket List Button with Label -->
+          <button
+            id="bucket-btn"
+            class="bucket-btn"
+            aria-label="Open Bucket List"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="bucket-icon"
+            >
+              <path
+                d="M9 2h6a2 2 0 0 1 2 2v2h-2V4H9v2H7V4a2 2 0 0 1 2-2z"
+              ></path>
+              <path d="M5 8h14l-1 12H6L5 8z"></path>
+            </svg>
+            <span class="bucket-label">Bucket List</span>
+            <span id="bucket-count" class="bucket-count">0</span>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="fade-in">Welcome to Gourmet Delights</h1>
+          <p class="fade-in">
+            Indulge in our exquisite range of starters, mains, drinks, and
+            desserts, crafted with passion!
+          </p>
+          <button class="cta-button fade-in" onclick="scrollToMenu()">
+            Explore Our Menu
+          </button>
+        </div>
+        <img
+          src="images/hero-food.png"
+          alt="Delicious Food Spread"
+          class="hero-image fade-in"
+        />
+      </div>
+    </section>
+
+    <!-- ==================== MENU ==================== -->
+    <section class="products" id="menu">
+      <div class="container">
+        <h2 class="section-title">Our Menu</h2>
+        <div class="menu-dropdown">
+          <select id="category-select" onchange="filterProducts()">
+            <option value="all">All</option>
+            <option value="starters">Starters</option>
+            <option value="mains">Mains</option>
+            <option value="drinks">Drinks</option>
+            <option value="desserts">Desserts</option>
+          </select>
+        </div>
+
+        <div class="product-grid">
+          <!-- Starters -->
+          <div class="product-card category-starters">
+            <img
+              src="images/spring-rolls.jpg"
+              alt="Vegetable Spring Rolls"
+              class="product-image"
+            />
+            <h3>Vegetable Spring Rolls</h3>
+            <p class="product-description">
+              Crispy rolls filled with fresh veggies and served with sweet chili
+              dip.
+            </p>
+            <p>R40.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Vegetable Spring Rolls', 40.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-starters">
+            <img
+              src="images/salad.jpg"
+              alt="Caprese Salad"
+              class="product-image"
+            />
+            <h3>Caprese Salad</h3>
+            <p class="product-description">
+              Fresh tomatoes, mozzarella, basil, and balsamic glaze.
+            </p>
+            <p>R60.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Caprese Salad', 60.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-starters">
+            <img
+              src="images/soup.jpg"
+              alt="Soup of the Day"
+              class="product-image"
+            />
+            <h3>Soup of the Day</h3>
+            <p class="product-description">
+              A warm, flavorful soup made with seasonal ingredients.
+            </p>
+            <p>R45.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Soup of the Day', 45.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-starters">
+            <img
+              src="images/garlic-bread.jpg"
+              alt="Garlic Bread"
+              class="product-image"
+            />
+            <h3>Garlic Bread</h3>
+            <p class="product-description">
+              Toasted bread with garlic butter and herbs.
+            </p>
+            <p>R30.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Garlic Bread', 30.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+
+          <!-- Mains -->
+          <div class="product-card category-mains">
+            <img
+              src="images/pasta.jpg"
+              alt="Creamy Alfredo Pasta"
+              class="product-image"
+            />
+            <h3>Creamy Alfredo Pasta</h3>
+            <p class="product-description">
+              Fettuccine in a rich, creamy Alfredo sauce with parmesan.
+            </p>
+            <p>R90.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Creamy Alfredo Pasta', 90.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-mains">
+            <img
+              src="images/burger.jpg"
+              alt="Gourmet Cheeseburger"
+              class="product-image"
+            />
+            <h3>Gourmet Cheeseburger</h3>
+            <p class="product-description">
+              Juicy beef patty with cheddar, lettuce, and secret sauce.
+            </p>
+            <p>R80.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Gourmet Cheeseburger', 80.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-mains">
+            <img
+              src="images/steak.jpg"
+              alt="Grilled Sirloin Steak"
+              class="product-image"
+            />
+            <h3>Grilled Sirloin Steak</h3>
+            <p class="product-description">
+              Tender sirloin with herb butter and roasted vegetables.
+            </p>
+            <p>R120.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Grilled Sirloin Steak', 120.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-mains">
+            <img
+              src="images/pizza.jpg"
+              alt="Margherita Pizza"
+              class="product-image"
+            />
+            <h3>Margherita Pizza</h3>
+            <p class="product-description">
+              Classic pizza with tomato sauce, mozzarella, and basil.
+            </p>
+            <p>R100.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Margherita Pizza', 100.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-mains">
+            <img
+              src="images/fish-chips.jpg"
+              alt="Fish and Chips"
+              class="product-image"
+            />
+            <h3>Fish and Chips</h3>
+            <p class="product-description">
+              Crispy battered fish with golden fries and tartar sauce.
+            </p>
+            <p>R90.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Fish and Chips', 90.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+
+          <!-- Drinks -->
+          <div class="product-card category-drinks">
+            <img
+              src="images/juice.jpg"
+              alt="Fresh Orange Juice"
+              class="product-image"
+            />
+            <h3>Fresh Orange Juice</h3>
+            <p class="product-description">
+              Cold-pressed orange juice, bursting with flavor.
+            </p>
+            <p>R25.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Fresh Orange Juice', 25.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-drinks">
+            <img
+              src="images/coffee.jpg"
+              alt="Artisan Coffee"
+              class="product-image"
+            />
+            <h3>Artisan Coffee</h3>
+            <p class="product-description">
+              Rich, locally roasted coffee with a smooth finish.
+            </p>
+            <p>R30.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Artisan Coffee', 30.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-drinks">
+            <img
+              src="images/wine.jpg"
+              alt="House Red Wine"
+              class="product-image"
+            />
+            <h3>House Red Wine</h3>
+            <p class="product-description">
+              A glass of our finest South African red wine.
+            </p>
+            <p>R40.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('House Red Wine', 40.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-drinks">
+            <img
+              src="images/soda.jpg"
+              alt="Classic Soda"
+              class="product-image"
+            />
+            <h3>Classic Soda</h3>
+            <p class="product-description">
+              Refreshing carbonated soda in various flavors.
+            </p>
+            <p>R20.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Classic Soda', 20.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-drinks">
+            <img
+              src="images/smoothie.jpg"
+              alt="Berry Smoothie"
+              class="product-image"
+            />
+            <h3>Berry Smoothie</h3>
+            <p class="product-description">
+              Blended berries with yogurt for a healthy treat.
+            </p>
+            <p>R35.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Berry Smoothie', 35.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+
+          <!-- Desserts -->
+          <div class="product-card category-desserts">
+            <img
+              src="images/cheesecake.jpg"
+              alt="New York Cheesecake"
+              class="product-image"
+            />
+            <h3>New York Cheesecake</h3>
+            <p class="product-description">
+              Creamy cheesecake with a graham cracker crust and berry compote.
+            </p>
+            <p>R60.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('New York Cheesecake', 60.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-desserts">
+            <img
+              src="images/ice-cream.jpg"
+              alt="Chocolate Ice Cream"
+              class="product-image"
+            />
+            <h3>Chocolate Ice Cream</h3>
+            <p class="product-description">
+              Rich chocolate ice cream with a fudge drizzle.
+            </p>
+            <p>R40.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Chocolate Ice Cream', 40.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-desserts">
+            <img
+              src="images/brownie.jpg"
+              alt="Fudge Brownie"
+              class="product-image"
+            />
+            <h3>Fudge Brownie</h3>
+            <p class="product-description">
+              Decadent chocolate brownie served warm with vanilla ice cream.
+            </p>
+            <p>R50.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Fudge Brownie', 50.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+          <div class="product-card category-desserts">
+            <img
+              src="images/fruit-tart.jpg"
+              alt="Fresh Fruit Tart"
+              class="product-image"
+            />
+            <h3>Fresh Fruit Tart</h3>
+            <p class="product-description">
+              Buttery tart filled with custard and topped with seasonal fruits.
+            </p>
+            <p>R70.00</p>
+            <button
+              class="add-to-cart"
+              onclick="addToBucket('Fresh Fruit Tart', 70.00)"
+            >
+              Add to Bucket
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BUCKET LIST MODAL ==================== -->
+    <div id="bucket-modal" class="bucket-modal">
+      <div class="bucket-modal-content">
+        <span class="bucket-close">×</span>
+        <h2>Bucket List</h2>
+
+        <ul id="bucket-items"></ul>
+
+        <div class="delivery-section">
+          <h3>Delivery Option</h3>
+          <label
+            ><input type="radio" name="delivery" value="pickup" checked />
+            Pick-up (Free)</label
+          ><br />
+          <label
+            ><input type="radio" name="delivery" value="standard" /> Standard
+            Delivery (R35)</label
+          ><br />
+          <label
+            ><input type="radio" name="delivery" value="express" /> Express
+            Delivery (R70)</label
+          >
+        </div>
+
+        <div class="bucket-totals">
+          <p>Subtotal: R<span id="bucket-subtotal">0.00</span></p>
+          <p>Delivery: R<span id="bucket-delivery">0.00</span></p>
+          <p class="grand-total">Total: R<span id="bucket-total">0.00</span></p>
+        </div>
+
+        <div class="bucket-actions">
+          <button id="clear-bucket" class="clear-cart">
+            Clear Bucket List
+          </button>
+          <button id="checkout-btn" class="cta-button">
+            Proceed to Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer>
+      <div class="container">
+        <p>Gourmet Delights Restaurant</p>
+        <p>SE7 Barrage Road, Vanderbijlpark, Gauteng, South Africa</p>
+        <p>Phone: (016) 123-4567</p>
+        <div class="social-links">
+          <a href="https://facebook.com" target="_blank" class="social-link"
+            >Facebook</a
+          >
+          <a href="https://x.com" target="_blank" class="social-link">X</a>
+          <a href="https://instagram.com" target="_blank" class="social-link"
+            >Instagram</a
+          >
+          <a href="https://linkedin.com" target="_blank" class="social-link"
+            >LinkedIn</a
+          >
+          <a href="https://youtube.com" target="_blank" class="social-link"
+            >YouTube</a
+          >
+          <a href="https://pinterest.com" target="_blank" class="social-link"
+            >Pinterest</a
+          >
+          <a href="https://tiktok.com" target="_blank" class="social-link"
+            >TikTok</a
+          >
+        </div>
+        <p>© 2025 Gourmet Delights. All rights reserved.</p>
+        <p>
+          Discover more:
+          <a href="https://www.foodnetwork.com" target="_blank">Food Network</a>
+          | <a href="https://www.tasteatlas.com" target="_blank">TasteAtlas</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
